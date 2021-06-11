@@ -73,11 +73,16 @@ body {
   -ms-text-fill-color: transparent;
   -o-text-fill-color: transparent;
 }
+#gtco-main-nav-2 {
+  top: 60px;
+}
 #my-nav {
   position: fixed;
-  top: 2%;
+  padding: 3% 2% 1% 2%;
   width: 80%;
   z-index: 10;
+  left: 120px;
+  border-radius: 30px 30px 100px 100px;
 }
 #gtco-main-nav .bar1, #gtco-main-nav .bar2, #gtco-main-nav .bar3 {
   width: 25px;
@@ -668,7 +673,7 @@ body {
 }
 .gtco-blogs-first {
   background: #fcfcfc;
-  margin-top: -180px !important;
+  margin-top: -120px !important;
 }
 .gtco-blogs {
   background: #fcfcfc;
@@ -822,7 +827,7 @@ body {
   font: inherit;
   margin: 0;
 }
-.gtco-navbar a:hover, .gtco-dropdown:hover .gtco-dropbtn {
+.gtco-navbar a:hover, .gtco-dropdown:hover .gtco-dropbtn, #gtco-dropdown.clicked .gtco-dropbtn {
   background-color: #06c6f9;;
 }
 .gtco-dropdown-content {
@@ -833,13 +838,14 @@ body {
   right: 5%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  border-radius: 100px;
 }
 .gtco-dropdown-content .gtco-header {
   background-color: #1d3ede;
   padding: 16px;
   color: white;
 }
-.gtco-dropdown:hover .gtco-dropdown-content {
+#gtco-dropdown.clicked .gtco-dropdown-content {
   display: block;
 }
 /* Create three equal gtco-columns that floats next to each other */
@@ -872,4 +878,17 @@ body {
     width: 100%;
     height: auto;
   }
+}
+#gtco-column-1 {
+  border-radius: 0px 0px 0px 100px;
+}
+#gtco-column-3 {
+  border-radius: 0px 0px 100px 0px;
+}
+#my-nav.scrolled {
+  background-color: #1d3ede !important;
+  transition: background-color 200ms linear;
+}
+#my-nav.scrolled .nav-link {
+  color:#fff;
 }

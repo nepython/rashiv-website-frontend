@@ -75,3 +75,25 @@
 function myFunction(x) {
     x.classList.toggle("change");
 }
+
+//change nav color on scroll
+$(function () {
+    $(document).scroll(function () {
+        var $nav = $("#my-nav");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
+});
+
+// Persist the dropdown if button clicked instead of hovered
+function dropdownClicked() {
+    var element = document.getElementById("gtco-dropdown");
+    var element2 = document.getElementById("gtco-navbar");
+    if (element.classList.contains("clicked")) {
+        element.classList.remove("clicked");
+        element2.classList.remove("clicked");
+    }
+    else {
+        element.classList.add("clicked");
+        element2.classList.add("clicked");
+    }
+}
