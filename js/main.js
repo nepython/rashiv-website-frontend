@@ -84,16 +84,7 @@ $(function () {
     });
 });
 
-// Persist the dropdown if button clicked instead of hovered
-function dropdownClicked() {
-    var element = document.getElementById("gtco-dropdown");
-    var element2 = document.getElementById("gtco-navbar");
-    if (element.classList.contains("clicked")) {
-        element.classList.remove("clicked");
-        element2.classList.remove("clicked");
-    }
-    else {
-        element.classList.add("clicked");
-        element2.classList.add("clicked");
-    }
+// courses list page
+function courseHover(courseId) {
+    document.getElementById(courseId).innerHTML = "View the course details";
 }
