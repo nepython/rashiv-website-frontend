@@ -81,6 +81,13 @@ $(function () {
     $(document).scroll(function () {
         var $nav = $("#my-nav");
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        var $navlogo = $(".rashiv-nav-logo");
+        if ( $nav.hasClass('scrolled') ) {
+            $navlogo.attr('src', 'images/rashiv_logo-white.png');
+        }
+        else {
+            $navlogo.attr('src', 'images/rashiv_logo-blue.png');
+        }
     });
 });
 

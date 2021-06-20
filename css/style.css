@@ -671,10 +671,6 @@ body {
     margin: 20px 0;
   }
 }
-.gtco-blogs-first {
-  background: #fcfcfc;
-  margin-top: -120px !important;
-}
 .gtco-blogs {
   background: #fcfcfc;
   margin: 100px auto;
@@ -834,8 +830,6 @@ body {
   display: none;
   position: absolute;
   width: 200px;
-  left: 5%;
-  right: 5%;
   box-shadow: -30px 20px 20px 0px gray;
   z-index: 1;
   border-radius: 100px;
@@ -902,6 +896,8 @@ body {
   margin-bottom: 3%;
   margin-top: 29px;
   margin-bottom: 30px;
+  border-radius: 60px 0px;
+  box-shadow: 10px 15px 10px 0 rgba(0, 0, 0, 0.08);
 }
 a.courses-name {
   margin-top: 0px;
@@ -926,4 +922,19 @@ a.courses-name {
   margin-left: -21px;
   margin-top: -1px;
   margin-bottom: -30px;
+  box-shadow: 0 150px 40px 3px rgba(0, 0, 0, 0.08);
+}
+.rashiv-logo {
+  border-style: none;
+  padding-bottom: 3%;
+  padding-top: 2%;
+  width: 90%;
+}
+.rashiv-nav-logo {
+  width: 20%;
+}
+.btn {
+  width: 110px;
+  height: 40px;
+  margin-top: 2px !important;
 }
