@@ -74,6 +74,13 @@
 // menu toggle button
 function myFunction(x) {
     x.classList.toggle("change");
+    if ($("#my-nav").css("position") == "fixed") {
+        // using .attr since .css doesn't understand !important in jquery
+        $("#my-nav").attr('style', 'position: inherit;background-color: transparent !important;');
+    }
+    else {
+        $("#my-nav").css("position", "fixed");
+    }
 }
 
 //change nav color on scroll
@@ -94,4 +101,17 @@ $(function () {
 // courses list page
 function courseHover(courseId) {
     document.getElementById(courseId).innerHTML = "View the course details";
+}
+
+// course select dropdown on contact us page
+var expanded = false;
+function showCheckboxes() {
+  var checkboxes = document.getElementById("checkboxes");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
 }
