@@ -791,7 +791,7 @@ h4.courses-header {
 .courses-container h2 {
   margin-bottom: 50px !important;
 }
-.courses-container::before { 
+.courses-container::before {
   display: block;
   content: " ";
   margin-top: -110px;
@@ -1078,4 +1078,8 @@ a.courses-name {
 }
 .glogo{
   padding-left: -20px;
+}
+div#wa-widget-send-button{
+  width: 60px;
+  height: 60px;
 }
