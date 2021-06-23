@@ -1041,6 +1041,7 @@ a.courses-name {
   z-index: 10;
   position: relative;
   background-color: #59d9fb;
+  width: 1000px;
 }
 .sv-main-element {
   margin-left: -10px;
@@ -1051,6 +1052,13 @@ a.courses-name {
   z-index: 10;
   position: inherit;
   background-color: #4ad5fa;
+  width: 1000px;
+}
+footer {
+  overflow: hidden;
+}
+.nav.follow-us-nav {
+  flex-wrap: unset;
 }
 .careers-footer {
   color: #1d3ede;

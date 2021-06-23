@@ -54,11 +54,15 @@
         );
     }
 
-
-    // svg responsive in mobile mode
     var checkPosition = function() {
+        // svg responsive in mobile mode
         if ($(window).width() < 767) {
             $("#bg-services").attr("viewBox", "0 0 1050 800");
+
+        }
+        // RSC Logo responsive in mobile mode
+        if ($(window).width() <= 600) {
+            $(".rashiv-logo").attr("src", "images/rashiv_logo-white.png");
 
         }
     };
