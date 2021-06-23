@@ -115,3 +115,87 @@ function showCheckboxes() {
     expanded = false;
   }
 }
+
+// password validators
+document.addEventListener('DOMContentLoaded', function () {
+    // Password should match confirm password
+    var myInput1 = document.getElementById('password');
+    var myInput2 = document.getElementById('confirm_password');
+    if (myInput2 == null) {
+        return;
+    }
+    myInput2.onkeyup = function () {
+        if (myInput1.value != myInput2.value) {
+            // this adds the error class
+            myInput2.style.border = '2px solid red';
+            document.getElementById('submit').disabled = true;
+        } else {
+            // this removes the error class
+            myInput2.style.border = '';
+            document.getElementById('submit').disabled = false;
+        }
+    };
+
+    // Don't give user a hard time to figure out what is wrong
+    var letter = document.getElementById('letter');
+    var capital = document.getElementById('capital');
+    var number = document.getElementById('number');
+    var length = document.getElementById('length');
+
+    // When the user starts to type something inside the password field
+    myInput1.onkeyup = function () {
+        // Validate lowercase letters
+        var lowerCaseLetters = /[a-z]/g;
+        if (myInput1.value.match(lowerCaseLetters)) {
+            letter.classList.remove('invalid');
+            letter.classList.add('valid');
+        } else {
+            letter.classList.remove('valid');
+            letter.classList.add('invalid');
+        }
+
+        // Validate capital letters
+        var upperCaseLetters = /[A-Z]/g;
+        if (myInput1.value.match(upperCaseLetters)) {
+            capital.classList.remove('invalid');
+            capital.classList.add('valid');
+        } else {
+            capital.classList.remove('valid');
+            capital.classList.add('invalid');
+        }
+
+        // Validate numbers
+        var numbers = /[0-9]/g;
+        if (myInput1.value.match(numbers)) {
+            number.classList.remove('invalid');
+            number.classList.add('valid');
+        } else {
+            number.classList.remove('valid');
+            number.classList.add('invalid');
+        }
+
+        // Validate length
+        if (myInput1.value.length >= 8) {
+            length.classList.remove('invalid');
+            length.classList.add('valid');
+        } else {
+            length.classList.remove('valid');
+            length.classList.add('invalid');
+        }
+    };
+});
+// password toggle visibility
+function toggleVisibility(idname) {
+    var $inputBox = $(`#${idname}`);
+    var $eye = $inputBox.siblings("span").children("i");
+    var type = $inputBox.attr("type");
+    if (type === "text") {
+        $inputBox.attr("type", "password");
+        $eye.addClass("fa-eye-slash");
+        $eye.removeClass("fa-eye");
+    } else {
+        $inputBox.attr("type", "text");
+        $eye.addClass("fa-eye");
+        $eye.removeClass("fa-eye-slash");
+    }
+}

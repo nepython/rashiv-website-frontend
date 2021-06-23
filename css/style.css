@@ -243,6 +243,10 @@ body {
   padding-top: 5px;
   margin-left: 15px;
 }
+.submit-button {
+  border-color: transparent;
+  cursor: pointer;
+}
 
 .gtco-feature h2, .gtco-features h2 {
   font-family: "Lato-Regular";
@@ -967,6 +971,17 @@ a.courses-name {
 .margin-40 {
   margin-top: 40px;
 }
+.margin-50-20 {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+.margin-20 {
+  margin-top: 20px;
+}
+.margin-30-20 {
+  margin-top: 30px;
+  margin-left: 20px;
+}
 .multiselect {
   width: 450px;
   padding-bottom: 6px;
@@ -1061,25 +1076,68 @@ a.courses-name {
 .pass:hover{
   text-decoration: underline;
 }
-.signup_link{
+.signup_link, .register_link{
   margin: 30px 0;
   font-size: 16px;
   color: #666666;
 
 }
-.signup_link a{
+.signup_link a, .register_link a{
   background: none;
   font-size: 16px;
   color: #2691d9;
   text-decoration: none;
 }
-.signup_link a:hover{
+.signup_link a:hover, .register_link a:hover{
   text-decoration: underline;
+}
+#pass_validation {
+  display: block;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 450px
+}
+#pass_validation p {
+  padding: 0px 35px;
+  font-size: 18px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+/* Add a green text color and a checkmark when the requirements are right */
+.password.valid {
+  color: green;
+}
+.password.valid:before {
+  position: relative;
+  left: -35px;
+  content: '\2714';
+}
+/* Add a red text color and an "x" when the requirements are wrong */
+.password.invalid {
+  color: red;
+}
+.password.invalid:before {
+  position: relative;
+  left: -35px;
+  content: '\2716';
+}
+.inline-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.password-toggle {
+  margin-left: -45px;
+  cursor: pointer;
+  margin-top: 12px;
+  font-size: x-large;
 }
 .glogo{
   padding-left: -20px;
-}
-div#wa-widget-send-button{
+}div#wa-widget-send-button{
   width: 60px;
   height: 60px;
 }
