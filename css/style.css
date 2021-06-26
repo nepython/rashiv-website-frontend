@@ -123,6 +123,7 @@ body {
 #gtco-main-nav form a.btn-info {
   background: #01e6f8;
   border-color: #01e6f8;
+  padding-left: 19px;
 }
 #gtco-main-nav form a.btn-outline-dark {
   border-color: #fff;
@@ -780,12 +781,6 @@ body {
   margin: 0;
   padding: 0;
 }
-.courses-nav li.nav-item {
-  list-style-type: circle;
-}
-.courses-nav a.nav-link:hover {
-  color: black;
-}
 h4.courses-header {
   font-weight: bold;
 }
@@ -802,6 +797,83 @@ h4.courses-header {
   height: 105px;
   visibility: hidden;
   pointer-events: none;
+}
+.courses-list .item {
+  height: 250px;
+  border: red;
+  border-style: solid;
+  border-radius: 75px 10px 10px 10px;
+  overflow: hidden;
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.25);
+  margin: 30px;
+}
+.courses-list .item .pic {
+  overflow: hidden;
+  height: 150px;
+  background-color: greenyellow;
+}
+.courses-list.blue .item .pic {
+  background-color: rgb(78, 55, 209);
+}
+.courses-list.orange .item .pic {
+  background-color: rgb(255, 133, 19);
+}
+.courses-list.magenta .item .pic {
+  background-color: magenta;
+}
+.courses-list .item h4 {
+  margin: 10px;
+  font-size: 23px;
+  font-weight: bold;
+}
+.courses-container .item:hover .view-details {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+}
+.courses-container .item .view-details {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  height: 250px;
+  line-height: 250px;
+  border-radius: 75px 10px 10px 10px;
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+  margin: 30px;
+}
+.courses-container h2, .courses-container h4 {
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-carousel .owl-stage-outer {
+  padding: 5% 0;
+}
+.owl-item {
+  transition: 0.45s;
+  opacity: 0.7;
+}
+.owl-item.center {
+  transform: scale(1.2);
+  opacity: 1 !important;
+}
+.courses-container .item .price-tag {
+  position: absolute;
+  bottom: 37px;
+  text-align: center;
+  font-size: 15px;
+  margin-right: 30px;
+  width: 83%;
+}
+.card.text-center .card-img-top {
+  margin-top: 30px;
 }
 #gtco-footer .follow-us-nav a {
   padding: 0 10px;
@@ -839,6 +911,7 @@ h4.courses-header {
 .gtco-dropdown {
   float: left;
   overflow: hidden;
+  display: ruby;
 }
 .gtco-dropdown .gtco-dropbtn {
   font-size: 16px;
@@ -916,7 +989,7 @@ h4.courses-header {
   box-sizing: border-box;
   display: flex;
   line-height: 24px;
-  height: 291px;
+  height: 190px;
   width: 210px;
   position: relative;
   margin-right: 3%;
@@ -928,28 +1001,60 @@ h4.courses-header {
 }
 a.courses-name {
   margin-top: 0px;
-  border-style: unset;
-  height: unset;
-  width: unset;
-  border-radius: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 60px 0px;
   color: black;
   background-image: unset;
-  font-style: italic;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   padding: 0px;
 }
+a.courses-name .pic {
+  overflow: hidden;
+  height: 50%;
+  background-color: lightblue;
+  border-radius: 60px 0px 0px 0px;
+}
+a.courses-name h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
 .courses-box:hover {
-  background-image: linear-gradient(20deg, #1d3ede, white);
-  height: 350px;
+  height: 228px;
   width: 252px;
   margin-right: 19px;
   margin-left: -21px;
   margin-top: -1px;
   margin-bottom: -30px;
-  box-shadow: 0 150px 40px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 40px 40px 3px rgba(0, 0, 0, 0.08);
+}
+.courses-box:hover a.courses-name h2 {
+  font-size: 24px;
+}
+.courses-box:hover .view-details {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+}
+.courses-box .view-details {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  line-height: 228px;
+  border-radius: 60px 0px;
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
 }
 .rashiv-logo {
   border-style: none;
@@ -983,7 +1088,8 @@ a.courses-name {
   margin-left: 20px;
 }
 .multiselect {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   padding-bottom: 6px;
   margin-bottom: 30px;
 }
@@ -1021,7 +1127,7 @@ a.courses-name {
   background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
   border-radius: 50px;
   max-width: 450px;
-  width: 450px;
+  width: 100%;
   height: 60px;
   border: none;
   margin-bottom: 30px;
@@ -1074,6 +1180,7 @@ footer {
 }
 #gtco-form h4{
   padding-left: 20px;
+  text-align: left;
 }
 .pass{
   margin: -5px 0 20px 5px;
