@@ -5,24 +5,27 @@
     var carousels = function() {
         $(".owl-carousel1").owlCarousel(
             {
-                loop:true,
+                loop: true,
+                margin: 10,
                 center: true,
-                margin:0,
+                autoplay: true,
+                autoplayHoverPause: true,
+                items: 3,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
                 responsiveClass:true,
-                nav:false,
                 responsive:{
                     0:{
                         items:1,
-                        nav:false
+                        dots: true
                     },
                     600:{
-                        items:1,
-                        nav:false
+                        items:2,
+                        dots: true
                     },
                     1000:{
                         items:3,
-                        nav:true,
-                        loop:false
+                        dots: true
                     }
                 }
             }

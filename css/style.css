@@ -604,12 +604,14 @@ body {
   font-family: "Lato-Medium";
 }
 .gtco-testimonials .card h5 span {
-  font-size: 18px;
-  color: #666666;
+  font-size: 16px;
+  color: black;
   font-family: "OpenSans-Regular";
 }
 .gtco-testimonials .card p {
-  font-size: 18px;
+  font-size: 13px;
+  overflow-y: auto;
+  max-height: 190px;
 }
 .gtco-testimonials .active {
   opacity: 0.5;
@@ -622,10 +624,10 @@ body {
   font-size: 24px;
 }
 .gtco-testimonials .center h5 span {
-  font-size: 20px;
+  font-size: 17px;
 }
 .gtco-testimonials .center p {
-  font-size: 20px;
+  font-size: 14px;
 }
 .gtco-testimonials .center .card-img-top {
   max-width: 100%;
@@ -667,7 +669,8 @@ body {
   margin: 50px auto;
 }
 .gtco-logo-area .col .img-fluid {
-  max-height: 32px;
+  max-height: 64px;
+  margin-left: 100px;
 }
 @media (max-width: 600px) {
   .gtco-logo-area .col {
@@ -911,7 +914,10 @@ h4.courses-header {
 .gtco-dropdown {
   float: left;
   overflow: hidden;
-  display: ruby;
+}
+.gtco-dropdown i.fa.fa-caret-down {
+  margin-left: 5px;
+  display: unset;
 }
 .gtco-dropdown .gtco-dropbtn {
   font-size: 16px;
@@ -1064,6 +1070,7 @@ a.courses-name h2 {
 }
 .rashiv-nav-logo {
   width: 10%;
+  height: 10%;
 }
 .navbar-nav.mr-auto {
   width: 70%;
