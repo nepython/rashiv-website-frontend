@@ -1023,6 +1023,11 @@ a.courses-name .pic {
   height: 50%;
   background-color: lightblue;
   border-radius: 60px 0px 0px 0px;
+  text-align: center;
+  line-height: 88px;
+}
+a.courses-name .pic img {
+  height: 80px;
 }
 a.courses-name h2 {
   text-align: center;

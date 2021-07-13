@@ -18,9 +18,10 @@
     * Font Awesome
     * Flags Counter
     * Google Map
-* Demo Images:
+* Images:
     * [Unsplash](http://unsplash.com)
-    * [Undraw](https://undraw.co/)
+    * [Undraw](https://undraw.co)
+    * [pngtree](https://pngtree.com)
 
 #### Credits:
 Template was originally Designed & Developed by [GetTemplates.co](http://gettemplates.co/) and [FreeHTML5.co](http://freehtml5.co/) and is being used under the [License](https://github.com/nepython/rashivcloudsolutions/blob/main/LICENSE.txt) provided.
