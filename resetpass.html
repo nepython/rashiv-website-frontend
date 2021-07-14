@@ -56,59 +56,55 @@
         </div>
     </div>
 </nav>
+
 <div class="container-fluid gtco-banner-area">
     <div class="container">
         <div class="row">
-            <form action="" method="POST" class="col-lg-6 gtco-form" autocomplete="on">
+
+            <form action="javascript:;" onsubmit="sendOTP()" class="col-lg-6 gtco-form" id="1" autocomplete="on" method="POST">
                 <img class="rashiv-logo" src="images/rashiv_logo-blue.png" alt="logo"></img>
-                <h2 class="margin-40"> Contact Us </h2>
-                <input name="full_name" type="text" class="form-control" placeholder="Full Name" required>
-                <input name="email" type="email" class="form-control" placeholder="Email Address" required>
-                <input name="phone" type="tel" class="form-control" placeholder="Phone number (optional)">
-                <div class="multiselect">
-                    <div class="selectBox" onclick="showCheckboxes()">
-                        <select class="course-select">
-                            <option>Interested course types (optional)</option>
-                        </select>
-                        <div class="overSelect"></div>
-                    </div>
-                    <div id="checkboxes">
-                        <label for="one">
-                            <input name="aws" type="checkbox" id="one" />Amazon Web Services</label>
-                        <label for="two">
-                            <input name="gcp" type="checkbox" id="two" />Google Cloud Platform</label>
-                        <label for="three">
-                            <input name="azure" type="checkbox" id="three" />Microsoft Azure</label>
-                        <label for="four">
-                            <input name="behavioral" type="checkbox" id="four" />Behavioral Training</label>
-                        <label for="five">
-                            <input name="soft_skills" type="checkbox" id="five" />Soft Skills Training</label>
-                    </div>
+                <h4 class="margin-40">An OTP would be sent to your email address if it's registered.</h4>
+                <input name="email" id="reg_email" type="email" class="form-control" placeholder="Email Address" required>
+                <button id= "submit" type="submit" class="submit-button">Send OTP<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                <p> <a href="#" class="submit-button"><img class="glogo" src="images/google_logo.png">Log In with Google <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+                <div class="signup_link">
+                    Don't have an account? <a href="./register.html">Register here</a>
                 </div>
-                <textarea name="message" class="form-control" placeholder="Message" required></textarea>
-                <button id= "submit" type="submit" class="submit-button">Submit <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+            </form>
+
+            <form action="" method="POST" class="col-lg-6 gtco-form" id="2" autocomplete="on" style="display: none;">
+                <img class="rashiv-logo" src="images/rashiv_logo-blue.png" alt="logo"></img>
+                <h4 class="margin-40">Reset Password</h4>
+                <input name="email" id="regemail" type="email" class="form-control" placeholder="Email Address" disabled>
+                <input name="otp" type="text" class="form-control" placeholder="OTP sent on your registered email" required>
+                <div class="inline-row">
+                    <input name="password" id="password" type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password" required />
+                    <span class="password-toggle"><i class="fa fa-eye-slash" id="eye" onclick="toggleVisibility('password')"></i></span>
+                </div>
+                <div class="inline-row">
+                    <input name="confirm_password" id="confirm_password" type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Confirm Password" required />
+                    <span class="password-toggle"><i class="fa fa-eye-slash" id="eye" onclick="toggleVisibility('confirm_password')"></i></span>
+                </div>
+                <div id="pass_validation">
+                    <h5>Password must contain the following:</h5>
+                    <p class="password invalid" id="letter">A <b>lowercase</b> letter</p>
+                    <p class="password invalid" id="capital">A <b>capital (uppercase)</b> letter</p>
+                    <p class="password invalid" id="number">A <b>number</b></p>
+                    <p class="password invalid" id="length">Minimum <b>8 characters</b></p>
+                </div>
+                <button id= "submit" type="submit" class="submit-button">Reset Password<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                <p> <a href="#" class="submit-button"><img class="glogo" src="images/google_logo.png">Log In with Google <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+                <div class="signup_link">
+                    Don't have an account? <a href="./register.html">Register here</a>
+                </div>
             </form>
             <div class="col-md-6">
                 <div class="card"><img class="card-img-top img-fluid" src="images/banner-img.png" alt=""></div>
             </div>
         </div>
-        <div class="row">
-            <h2 class="margin-40">Phone number:</h2>
-            <h5 class="margin-50-20">+91&nbsp;9591982101</h5>
-        </div>
-        <div class="row">
-            <h2 class="margin-20">Email id:</h2>
-            <h5 class="margin-30-20">admin@rahivcloudsolutions.com</h5>
-        </div>
-        <div class="row">
-            <h2 class="margin-20">Address:</h2>
-            <h5 class="margin-30-20"> Bengaluru, Karnataka, India</h5>
-        </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.762188074934!2d77.75967411167503!3d13.01421357363316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0e3163e607ff%3A0x6835b46a0cdc8cf1!2sAlpine%20Viva%2C%20139%2C%20Whitefield%20-%20Hoskote%20Rd%2C%20Sai%20Gardens%2C%20Seegehalli%2C%20Krishnarajapura%2C%20Bengaluru%2C%20Karnataka%20560067!5e0!3m2!1sen!2sin!4v1624272196798!5m2!1sen!2sin"
-            width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
     </div>
 </div>
+
 <footer class="container-fluid" id="gtco-footer">
     <div class="container">
         <div class="row">
