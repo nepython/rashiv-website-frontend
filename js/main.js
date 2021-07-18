@@ -264,3 +264,7 @@ function sendOTP() {
         alert('Unable to make contact with server', error);
     });
 }
+
+function contactUs() {
+    alert("Please Contact us using the whatsapp widget or Contact Us page to know more details about the course.");
+}

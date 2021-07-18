@@ -1059,6 +1059,9 @@ a.courses-name h2 {
   /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
 }
+a.courses-link {
+  text-decoration: none;
+}
 .rashiv-logo {
   border-style: none;
   padding-bottom: 3%;
